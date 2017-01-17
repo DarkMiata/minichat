@@ -1,6 +1,6 @@
 <?php
 session_start(); // connexion à la session
-$pseudo = $_POST['pseudo']; // recupération de la variable pseudo...
+$pseudo = $_POST['pseudo']; // recupération de la variable pseudo dans sess...
 $_SESSION['pseudo'] = $pseudo; //... et stockage dans la variable de session
 ?>
 
@@ -18,7 +18,7 @@ $_SESSION['pseudo'] = $pseudo; //... et stockage dans la variable de session
                     
                     var msg = msgs[i];
                     
-                    $("#chat").html( $('#chat').html() + msg.dateheure+' - '+msg.pseudo+': '+msg.message+'<br>');
+                    $("#chat").html( $('#chat').html()+msg.dateheure+' - '+msg.pseudo+': '+msg.message+'<br>');
                     
                 }
             }
